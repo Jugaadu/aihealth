@@ -9,6 +9,7 @@ import { NextResponse } from "next/server";
 export const runtime = "edge";
 
 const config = new Configuration({
+  organization: process.env.OPENAI_ORG,
   apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(config);
